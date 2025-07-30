@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="ico_icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Temperature & Currency Converter | Utitbest</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="">
+        <header>
+          <div class="active" data-value="currency">Currency Converter</div>
+          <div data-value="temperature">Temperature Converter</div>
+        </header>
+
+        <main>
+          <div class="parentSlide" id="parentSlide1">
+            <div class="flipper">
+              <div class="converter-container">
+                  <div>
+                    <h3>Currency Converter</h3>
+                    <div class="content-wrapper">
+                      <div class="amount-container">
+                        <label class="formcode" for="currency-from">Amount</label>
+                        <input type="number" id="currency-from" placeholder="Enter amount" />
+                      </div>
+
+                      <div class="contentWraper">
+
+                      <div class="currency-select-container">
+                        <label class="formcode" for="currency-from-select1">From</label>
+                        <div class="custom-dropdown">
+                          <div class="dropdown-selected" id="fromCurrency1" data-value="">
+                              <span class="placeholder" data-placeHold="Select Country">Select Country</span>
+                              <button class="clear-button" style="display: none;">×</button>
+                              <div class="dropdown-arrow"></div>
+                          </div>
+                          <div class="dropdown-options">
+                              <input type="text" class="dropdown-search" placeholder="Search currencies...">
+                              <div class='contentwrapper'>
+                              </div>
+                          </div>
+                       </div>
+                      </div>
+
+                      <div class="manen">
+                        <button id="swapCurrencies">
+                          <img src="sort-swap-svgrepo-com.svg" alt="">
+                        </button>
+                      </div>
+
+                      <div class="currency-select-container" style="align-items: flex-end;">
+                        <label class="formcode" for="currency-to-select">To</label>
+                        <div class="custom-dropdown">
+                            <div class="dropdown-selected" id="toCurrency2" data-value="">
+                                <span class="placeholder" data-placeHold="Select Country">Select Country</span>
+                                <button class="clear-button" style="display: none;">×</button>
+                                <div class="dropdown-arrow"></div>
+                            </div>
+                            <div class="dropdown-options">
+                                <input type="text" class="dropdown-search" placeholder="Search currencies...">
+                                <div class='contentwrapper'></div>
+                            </div>
+                        </div>
+                      </div>
+                      </div>
+
+                      <button id="SyncExchange" class="ValueReturn">Get Exchange Rate</button>
+                      <div id="resultBand-Currency" class="RESULTBOX"></div>
+                    </div>
+                  </div>
+              </div>
+
+              <div class="temperature-container">
+                <div class="">
+                  <h3>Temperature Converter</h3>
+                  <div class="content-wrapper">
+                      <div class="amount-container">
+                        <label class="formcode" for="currency-from">Values</label>
+                        <input type="number" id="temperature-from" placeholder="°Enter amount" />
+                      </div>
+
+                      <div class="contentWraper">
+
+                      <div class="currency-select-container">
+                        <label class="formcode" for="currency-from-select">From</label>
+                        <div class="custom-dropdown" id="fromTemperature1">
+                          <div class="dropdown-selected" data-value="" id="fromtempe">
+                              <span class="placeholder" data-placeHold="°Select Unit">°Select Unit</span>
+                              <button class="clear-button" style="display: none;">×</button>
+                              <div class="dropdown-arrow"></div>
+                          </div>
+                          <div class="dropdown-options">
+                              <input type="text" class="dropdown-search" placeholder="Search currencies..." hidden>
+                              <div class="dropdown-temperate" data-value="celsius(°C)">🌡️ Celsius (°C)</div>
+                              <div class="dropdown-temperate" data-value="fahrenheit(°F)">🌡️ Fahrenheit (°F)</div>
+                              <div class="dropdown-temperate" data-value="kelvin(K)">🌡️ Kelvin (K)</div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="manen">
+                        <button id="temperatureSpin">
+                          <img src="sort-swap-svgrepo-com.svg" alt="">
+                        </button>
+                      </div>
+
+                      <div class="currency-select-container" style="align-items: flex-end;">
+                        <label class="formcode" for="currency-to-select">To</label>
+                         <div class="custom-dropdown" id="fromTemperature2">
+                          <div class="dropdown-selected" data-value="" id="totempe">
+                              <span class="placeholder" data-placeHold="°Select Unit">°Select Unit</span>
+                              <button class="clear-button" style="display: none;">×</button>
+                              <div class="dropdown-arrow"></div>
+                          </div>
+                          <div class="dropdown-options">
+                              <input type="text" class="dropdown-search" placeholder="Search currencies..." hidden>
+                              <div class="dropdown-temperate" data-value="celsius(°C)">🌡️ Celsius (°C)</div>
+                              <div class="dropdown-temperate" data-value="fahrenheit(°F)">🌡️ Fahrenheit (°F)</div>
+                              <div class="dropdown-temperate" data-value="kelvin(K)">🌡️ Kelvin (K)</div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+
+                      <button id="TemperatureConverterBud" class="ValueReturn">Calculate</button>
+                      <div id="temperatureREsu" class="RESULTBOX"></div>
+                    </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </main>
+        
+        <footer>
+          <div>Developed By Utitbest. Made with 💕❤️</div>
+        </footer>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html> 
+
+
+
+
+
+
