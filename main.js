@@ -55,7 +55,7 @@ async function fetchCountries() {
 
 window.addEventListener('DOMContentLoaded', async () => {
     initBackground()
-    
+    const isAndroid = /Android/i.test(navigator.userAgent);
     document.querySelectorAll('header div').forEach(e =>{
         e.addEventListener('click', () => {
             document.querySelectorAll('header div').forEach(e => e.classList.remove('active'))
@@ -72,7 +72,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             }
         })
     })
-
+    console.log(isAndroid)
 const allCountries = await fetchCountries();
 document.querySelectorAll('.custom-dropdown').forEach(dropdown => { 
   const selected = dropdown.querySelector('.dropdown-selected');
@@ -389,15 +389,14 @@ function ErrorLog(typeOfError){
   }
 
 }
-// const temperatureTab = document.getElementById('checkSize');
-// const currencyTab = document.getElementById('currencySize')
-// window.addEventListener('resize', ()=>{
-  
-//   if(window.innerWidth <= 500){
-//     currencyTab.innerHTML = `<img style="width:50px; height:50px;" src="currency-exchange-svgrepo-com.svg" alt="Idadt1">`;
-//     temperatureTab.innerHTML = `<img style="width:50px; height:50px;" src="thermometer-svgrepo-com.svg" alt="Idadt2">`;
-//   }else{
-//     temperatureTab.innerHTML = 'Temperature Converter';
-//     currencyTab.innerHTML = 'Currency Converter';
-//   }
-// })
+const temperatureTab = document.getElementById('checkSize');
+const currencyTab = document.getElementById('currencySize')
+window.addEventListener('resize', ()=>{
+  if(window.innerWidth <= 450){
+    currencyTab.innerHTML = 'Currency';
+    temperatureTab.innerHTML = 'Temperature';
+  }else{
+    temperatureTab.innerHTML = 'Temperature Converter';
+    currencyTab.innerHTML = 'Currency Converter';
+  }
+})
