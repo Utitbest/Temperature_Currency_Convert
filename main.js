@@ -72,7 +72,6 @@ window.addEventListener('DOMContentLoaded', async () => {
             }
         })
     })
-    console.log(isAndroid)
 const allCountries = await fetchCountries();
 document.querySelectorAll('.custom-dropdown').forEach(dropdown => { 
   const selected = dropdown.querySelector('.dropdown-selected');
@@ -121,7 +120,7 @@ document.querySelectorAll('.custom-dropdown').forEach(dropdown => {
     option.dataset.value = country.currency;
     option.dataset.symbol = country.symbol || '';
     option.innerHTML = `
-      <img src="${country.flagsvg || country.flagPng}" alt="${country.flagAlt}" style="width: 20px; height: 14px; margin-right: 6px;" />
+      <img src="${country.flagsvg || 'placeholder-600x317.gif'}" alt="${country.flagAlt}" style="width: 20px; height: 14px; margin-right: 6px;" />
       ${country.name} (${country.symbol || ''})
     `;
     option.addEventListener('click', (e) => {

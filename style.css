@@ -12,6 +12,7 @@ body{
   user-select: none;
   -ms-user-select: none;
   -webkit-user-select: none;
+  /* overflow: hidden; */
 }
 canvas{
   position: absolute;
@@ -29,6 +30,7 @@ canvas{
 #app{
   height: 100dvh;
   width: 100dvw;
+  width: 100vw;
   display: block;
 }
 #app > div{
@@ -47,10 +49,8 @@ header{
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  /* background: transparent; */
- /* backdrop-filter: blur(10px); */
-  background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
   
 }
 header > div{
@@ -503,6 +503,7 @@ footer{
     main .parentSlide{
       width:100%;
       margin: 0;
+      background: rgb(0 0 0 / 54%);
     }
     .amount-container > input, .formcode{
       width:95%;
@@ -515,6 +516,12 @@ footer{
     }
     .RESULTBOX{
       width:95%;
+    }
+    header{
+      background: rgb(0 0 0 / 54%);
+    }
+    footer{
+      background: rgb(0 0 0 / 54%);
     }
 }
 @media only screen and (max-width:450px){
@@ -530,14 +537,14 @@ footer{
   .ValueReturn{
     font-size: 1em;
   }
-     .dropdown-options {
-        position: fixed;
-        top: 22px;
-        left: 0;
-        width: 96%;
-        min-height: 68vh;
-        margin: auto;
-    }
+    .dropdown-options {
+      position: fixed;
+      top: 22px;
+      left: 0;
+      width: 96%;
+      min-height: 68vh;
+      margin: auto;
+  }
 }
 
 @media only screen and (max-width:350px){
