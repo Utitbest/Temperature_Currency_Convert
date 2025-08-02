@@ -13,8 +13,8 @@ https.get(url, (res) => {
 
   res.on('end', () => {
     fs.writeFileSync('public/fetchCountries.json', data, 'utf8');
-    console.log('✅ countries.json saved!');
+    console.log('countries.json saved!');
   });
 }).on('error', err => {
-  console.error('❌ Error fetching data:', err.message);
+  console.error('Error fetching data:', err.message);
 });

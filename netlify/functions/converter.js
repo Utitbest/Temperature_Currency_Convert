@@ -1,6 +1,5 @@
 import dotenv from 'dotenv';
 dotenv.config();
-// const url = `https://api.exchangerate.host/convert?from=${from}&to=${to}&amount=${amount}&access_key=4f6c9e41eb9cd3b4056e1a27b716f29c`;
 
 export async function handler(event) {
   const { from, to, amount } = event.queryStringParameters;
